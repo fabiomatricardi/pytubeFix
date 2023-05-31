@@ -2,6 +2,20 @@
 For pytune==12.1.3 and python 3.10 on GoogleColab
 
 
+## innertube.py
+Getting an error on __main__.py
+```
+File "/Users/bennicholl/opt/anaconda3/lib/python3.8/site-packages/pytube/__main__.py", line 346, in title
+    raise exceptions.PytubeError(
+
+PytubeError: Exception while accessing title of https://youtube.com/watch?v=JxnIkZU-oFE. Please file a bug report at https://github.com/pytube/pytube
+```
+Change innertube.py
+Line 78<br>
+from     `def __init__(self, client='ANDROID', use_oauth=False, allow_cache=True):`
+to     `def __init__(self, client='WEB', use_oauth=False, allow_cache=True):`
+> Pytube/innertube.py in line 78 change client = 'ANDRIOD' to client = 'WEB'
+
 ## Captions.py
 /usr/local/lib/python3.10/dist-packages/pytube/captions.py
 
